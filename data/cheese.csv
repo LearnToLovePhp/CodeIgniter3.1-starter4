@@ -1,0 +1,3 @@
+ingrID, catID, name, price, calories, image
+01, 03, mozzarella, 1.00, 550, ../public/img/cheese/mozzarella.png
+02, 03, cheddar, 1.00, 500, ../public/img/cheese/cheddar.png

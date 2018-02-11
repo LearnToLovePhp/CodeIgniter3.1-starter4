@@ -1,0 +1,3 @@
+ingrID, catID, name, price, calories, image
+01, 02, tomato, 1.00, 100, ../public/img/sauce/tomato.png
+02, 02, pesto, 2.00, 200, ../public/img/sauce/pesto.png

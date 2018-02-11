@@ -1,0 +1,3 @@
+ingrID, categoryID, name, price, calories, image
+01, 04, pepperoni, 2.00, 300, ../public/img/meat/pepperoni.png
+02, 04, sausage, 2.00, 350, ../public/img/meat/sausage.png
