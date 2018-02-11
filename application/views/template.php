@@ -9,6 +9,10 @@
 	</head>
 	<body>
         <div id="container">
+        <div class="navbar">
+                <div class="navbar-inner">
+                    {menubar} </div>
+            </div>    
 			{content}
 			<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds. 
 				{ci_version}</p>
