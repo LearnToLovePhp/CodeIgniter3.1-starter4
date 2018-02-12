@@ -1,0 +1,10 @@
+ingrID, catID, name, price, calories, image
+1,1, dough,5,800, ../public/img/dough.png
+2,2, tomato,1,100, ../public/img/sauce/tomato.png
+3,2, pesto,2,200, ../public/img/sauce/pesto.png
+4,3, mozzarella,1,550, ../public/img/cheese/mozzarella.png
+5,3, cheddar,1,500, ../public/img/cheese/cheddar.png
+6,4, pepperoni,2,300, ../public/img/meat/pepperoni.png
+7,4, sausage,2,350, ../public/img/meat/sausage.png
+8,5, mushroom,2,100, ../public/img/veg/mushroom.png
+9,5, pepper,2,125, ../public/img/veg/pepper.png

@@ -1,0 +1,2 @@
+ingrID, catID, name, price, calories, image
+01, 01, dough, 5.00, 800, ../public/img/dough.png
