@@ -3,7 +3,18 @@
 
 class Ingredients extends CSV_Model {
 
-    public function __construct() {
-        parent::__construct('../data/ingredients.csv', 'ingrID');
+    public $ingrID;
+
+    public $catID;
+
+    public $name;
+
+    public $price;
+
+    public $calories;
+
+
+    function __construct() {
+        parent::__construct(APPPATH . '../data/ingredients.csv', 'ingrID', 'ingredients');
     }
 }
