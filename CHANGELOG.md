@@ -5,6 +5,14 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [0.0.5] - 2018-02-11
+### Added
+- Base catalog view 
+- Catalog controller
+
+### Changed
+- routes - added separate route for catalog page
+- config - catalog goes to own page now
 
 ## [0.0.4] - 2018-02-10
 ### Added
