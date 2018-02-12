@@ -1,5 +1,11 @@
 <h1>Pizza Delicious Pizza</h1>
-
+<div>
+<select>
+{sauce}
+    <option value="{name}">{name}</option>
+{/sauce}
+</select>
+</div>
 <table>
     <tr id="base">
         {base}
