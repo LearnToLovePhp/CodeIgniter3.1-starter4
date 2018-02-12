@@ -255,6 +255,7 @@ class MY_Model2 extends MY_Model
 //  Record-oriented functions
 //---------------------------------------------------------------------------
 	// Retrieve an existing DB record as an object
+
 	function get($key1, $key2 = null)
 	{
 		$this->db->where($this->_keyField, $key1);
@@ -286,6 +287,7 @@ class MY_Model2 extends MY_Model
 	}
 
 	// Delete a record from the DB
+
 	function delete($key1, $key2 = null)
 	{
 		$this->db->where($this->_keyField, $key1);
@@ -294,6 +296,7 @@ class MY_Model2 extends MY_Model
 	}
 
 	// Determine if a key exists
+
 	function exists($key1, $key2 = null)
 	{
 		$this->db->where($this->_keyField, $key1);
