@@ -1,3 +1,3 @@
-pizzaID, name, baseID, sauceID, cheeseID, meatID, vegID
-01, Pepperoni, 01, 01, 01, 01, 01
-02, Sausage & Mushroom, 01, 01, 01, 02, 01
+pizzaID, name, sauce, cheese, meat, veg
+1, Pepperoni,2,4,6,9
+2, Sausage & Mushroom,3,5,7,8
