@@ -1,6 +1,5 @@
 <h1>Pizza Delicious Pizza</h1>
 
-
 <table>
     <tr id="base">
         {base}
@@ -81,10 +80,7 @@
         </td>
         {/veg}
     </tr>
-
-
     </table>
-
 
 <div>
 

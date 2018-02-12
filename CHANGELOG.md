@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
-## [0.0.7] - 2018-02-11
+## [0.0.6] - 2018-02-11
 ### Changed
 - catalog - implemented catalog controller
           - implemented view to list all ingredients by category
