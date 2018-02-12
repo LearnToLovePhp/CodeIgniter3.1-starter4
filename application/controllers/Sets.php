@@ -8,7 +8,7 @@ class Sets extends Application
     /*
         The index for the sets page
         Sets is the home page
-        It deisplays complete pizza sets
+        It displays complete pizza sets
     */
 	public function index()
 	{

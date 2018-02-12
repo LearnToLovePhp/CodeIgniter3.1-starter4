@@ -5,7 +5,7 @@ $config['menu_choices'] = array(
     'menudata' => array(
 
         array('name' => 'Equipment Sets', 'link' => '/sets'),
-        array('name' => 'Catalog', 'link' => '/#'),
+        array('name' => 'Catalog', 'link' => '/catalog')
         )
     );
 
