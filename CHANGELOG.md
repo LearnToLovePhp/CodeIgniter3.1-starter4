@@ -5,6 +5,11 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [0.0.7] - 2018-02-12
+- set - incomplete implementation of Set controller
+      - incomplete implementation of equipment_set view
+      - modified pizzas.csv to remove erroneous spacing
+
 ## [0.0.6] - 2018-02-11
 ### Changed
 - catalog - implemented catalog controller
