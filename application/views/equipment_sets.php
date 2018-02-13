@@ -1,37 +1,48 @@
-<h1>Pizza Delicious Pizza</h1>
-
-<script>
-    function getSelection() {
-        var selectTag = document.getElementById("select");
-        var selection = selectTag.options[selectTag.selectedIndex].text;
-    }
-</script>
+<div class="content center">
+<h1>Customize Your Pizza!</h1>
 
 <div>
     <!--The menu dropdown for equipment sets-->
-    
     <select id="select">
     {pizzas}
-        <option value="{name}" name="pizza">{name}</option>
+        <option value="{pizzaID}" name="pizza">{name}</option>
     {/pizzas}
     </select>
     
 </div>
 
 <!--The div for the image-->
-
-<div>
-    {pizza}
-    <img class="pizzaLayer" src="">
-    <img class="pizzaLayer" src="sauceImg">
-    <img class="pizzaLayer" src="cheeseImg">
-    <img class="pizzaLayer" src="meatImg">
-    <img class="pizzaLayer" src="cheeseImg">
+{pizzas}
+<div class="pizza-container {pizzaID}">
+    <div class="pizza-photos">
+        <img class="pizzaLayer" src="{baseImg}">
+        <img class="pizzaLayer" src="{sauceImg}">
+        <img class="pizzaLayer" src="{cheeseImg}">
+        <img class="pizzaLayer" src="{meatImg}">
+        <img class="pizzaLayer" src="{vegImg}">
+    </div>
+    <div>
     </br>
     <b>{name}</b>
     </br>
     <b>Total Cost:</b> {totalCost}
     </br>
     <b>Total Calories:</b> {totalCalories}
-    {/pizza}    
+    </div>
 </div>
+{/pizzas}
+
+</div>
+<script>
+    $(document).ready(function(){
+        $(".pizza-container").hide();
+        var pSelected = $('#select').val();
+        $("." + pSelected).show();
+    });
+
+    $('#select').change(function() {
+        $(".pizza-container").hide();
+        $("." + this.value).show();
+
+    });
+</script>

@@ -11,8 +11,6 @@ class Catalog extends Application
 
     public function index()
     {
-        $this->data['pagebody'] = 'view_catalog';
-
         $this->load->model('Ingredients');
 
         $ingredientList = $this->Ingredients->all();
@@ -21,7 +19,7 @@ class Catalog extends Application
         $sauces = array();
         $cheeses = array();
         $meats = array();
-        $veggies = array();
+        $veg = array();
 
         //Populates each array with the respective ingredients
         foreach ($ingredientList as $ingredient) {
@@ -69,7 +67,7 @@ class Catalog extends Application
                     break;
                 //catID = veg
                 case 5:
-                    array_push($veggies, array(
+                    array_push($veg, array(
                         "name" => $ingredient->name,
                         "type" => 'veg',
                         "price" => $ingredient->price,
@@ -81,12 +79,13 @@ class Catalog extends Application
         }
         
         //pass data to view_catalog as each of their respective names
-        $this->data['base'] = $bases;
-        $this->data['sauce'] = $sauces;
-        $this->data['cheese'] = $cheeses;
-        $this->data['meat'] = $meats;
-        $this->data['veg'] = $veggies;
+        $this->data['bases'] = $bases;
+        $this->data['sauces'] = $sauces;
+        $this->data['cheeses'] = $cheeses;
+        $this->data['meats'] = $meats;
+        $this->data['veg'] = $veg;
 
+        $this->data['pagebody'] = 'view_catalog';
         $this->render();
     }
 

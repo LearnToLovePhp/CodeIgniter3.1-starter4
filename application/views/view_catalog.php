@@ -1,14 +1,20 @@
 <h1>Pizza Delicious Pizza</h1>
-<div>
-<select>
-{sauce}
-    <option value="{name}">{name}</option>
-{/sauce}
-</select>
-</div>
-<table>
+<div class="content center">
+<table class="center">
+    <tr>
+        <th class="title">
+           Category
+        </th>
+        <th colspan="2">
+           Varieties
+        </th>
+
+    </tr>
     <tr id="base">
-        {base}
+        <td class="title">
+            Bases
+        </td>
+        {bases}
         <td>
             <img src="{img}" style="width:150px;height:150px" title="{name}"/>
             </br>
@@ -20,11 +26,14 @@
             </br>
             Calories: {calories}
         </td>
-        {/base}
+        {/bases}
     </tr>
 
-    <tr id="sauce">
-        {sauce}
+    <tr id="sauces">
+        <td class="title">
+            Sauces
+        </td>
+        {sauces}
         <td>
             <img src="{img}" style="width:150px;height:150px" title=""/>
             </br>
@@ -36,11 +45,14 @@
             </br>
             Calories: {calories}
         </td>
-        {/sauce}
+        {/sauces}
     </tr>
 
     <tr id="cheese">
-        {cheese}
+        <td class="title">
+            Cheese
+        </td>
+        {cheeses}
         <td>
             <img src="{img}" style="width:150px;height:150px" title=""/>
             </br>
@@ -52,11 +64,14 @@
             </br>
             Calories: {calories}
         </td>
-        {/cheese}
+        {/cheeses}
     </tr>
 
     <tr id="meat">
-        {meat}
+        <td class="title">
+            Meats
+        </td>
+        {meats}
         <td>
             <img src="{img}" style="width:150px;height:150px" title=""/>
             </br>
@@ -68,10 +83,13 @@
             </br>
             Calories: {calories}
         </td>
-        {/meat}
+        {/meats}
     </tr>
 
     <tr id="veg">
+        <td class="title">
+            Veggies
+        </td>
         {veg}
         <td>
             <img src="{img}" style="width:150px;height:150px" title=""/>
@@ -87,7 +105,4 @@
         {/veg}
     </tr>
     </table>
-
-<div>
-
 </div>
