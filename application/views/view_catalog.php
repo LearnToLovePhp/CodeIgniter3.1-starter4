@@ -1,5 +1,5 @@
-<h1>Pizza Delicious Pizza</h1>
 <div class="content center">
+    <h1>Pizza Topping List</h1>
 <table class="center">
     <tr>
         <th class="title">
