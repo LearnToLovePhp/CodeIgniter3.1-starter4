@@ -12,8 +12,6 @@ class Sets extends Application
     */
 	public function index()
 	{
-        $this->data['pagebody'] = 'equipment_sets';
-        
         $this->load->model('Pizzas');
         $this->load->model('Ingredients');
         
@@ -24,6 +22,7 @@ class Sets extends Application
         foreach($pizzaList as $pizza) {
             array_push($pizzas, array(
                 "name" => $pizza->name,
+                "pizzaID" =>$pizza->pizzaID,
                 "base" => 'dough',
                 "baseImg" => 'img/dough.png',
                 "sauce" => $ingredientList[$pizza->sauce]->name,
@@ -31,14 +30,17 @@ class Sets extends Application
                 "cheese" => $ingredientList[$pizza->cheese]->name,
                 "cheeseImg" => $ingredientList[$pizza->cheese]->image,
                 "meat" => $ingredientList[$pizza->meat]->name,
-                "meatImg" => $ingredientList[$pizza->meat]->image, 
+                "meatImg" =>$ingredientList[$pizza->meat]->image,
                 "veg" => $ingredientList[$pizza->veg]->name,
                 "vegImg" => $ingredientList[$pizza->veg]->image,
                 "totalCost" => $this->getTotalCost($pizza, $ingredientList),
                 "totalCalories" => $this->getTotalCalories($pizza, $ingredientList)
             ));
+
+
         }
 
+        $this->data['pagebody'] = 'equipment_sets';
         $this->data['pizzas'] = $pizzas;
 
 		$this->render(); 
@@ -76,14 +78,6 @@ class Sets extends Application
             $totalCalories += $ingredientList[$pizza->veg]->calories;
         
         return $totalCalories;
-    }
-
-    public function getPizza()
-    {
-        $selection = $this->select->get('pizza', false);
-
-
-        $this->render();
     }
 
 }
