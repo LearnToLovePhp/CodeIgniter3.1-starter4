@@ -9,6 +9,12 @@
         <script type="text/javascript" src="/assets/js/jquery-3.3.1.min.js"></script>
 	</head>
 	<body>
+        <div class="header center">
+            <h1 class="center header">
+                Pizza Picker - A topping tester
+            </h1>
+
+        </div>
         <div id="container">
             <div class="navbar">
                 <div class="navbar-inner">
