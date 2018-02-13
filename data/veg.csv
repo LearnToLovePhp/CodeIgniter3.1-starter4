@@ -1,0 +1,3 @@
+ingrID, catID, name, price, calories, image
+01, 05, mushroom, 2.00, 100, ../public/img/veg/mushroom.png
+02, 05, pepper, 2.00, 125, ../public/img/veg/pepper.png
