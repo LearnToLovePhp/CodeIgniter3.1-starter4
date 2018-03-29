@@ -39,6 +39,8 @@ class Sets extends Application
 
 
         }
+        $role = $this->session->userdata('userrole');
+        $this->data['role'] = $role;
 
         $this->data['pagebody'] = 'equipment_sets';
         $this->data['pizzas'] = $pizzas;
