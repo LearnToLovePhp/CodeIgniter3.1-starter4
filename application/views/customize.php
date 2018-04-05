@@ -1,20 +1,38 @@
 <div class="content center">
-<h1>Customize Your Pizza! - {role}</h1>
+<h1>Create a new pizza! - {role}</h1>
 
 <div>
     <!--The menu dropdown for equipment sets-->
-    <select id="select">
-    {pizzas}
-        <option value="{pizzaID}" name="pizza">{name}</option>
-    {/pizzas}
+    <select id="selectBase">
+    {bases}
+        <option value="{name}" name="pizza">{name}</option>
+    {/bases}
     </select>
-    {customize}
+    <select id="selectSauce">
+    {sauces}
+        <option value="{name}" name="pizza">{name}</option>
+    {/sauces}
+    </select>
+    <select id="selectCheese">
+    {cheeses}
+        <option value="{name}" name="pizza">{name}</option>
+    {/cheeses}
+    </select>
+    <select id="selectMeat">
+    {meats}
+        <option value="{name}" name="pizza">{name}</option>
+    {/meats}
+    </select>
+    <select id="selectVeg">
+    {veg}
+        <option value="{name}" name="pizza">{name}</option>
+    {/veg}
+    </select>
     
 </div>
 
 <!--The div for the image-->
-{pizzas}
-<div class="pizza-container {pizzaID}">
+<div class="pizza-container">
     <div class="pizza-photos">
         <img class="pizzaLayer" src="{baseImg}">
         <img class="pizzaLayer" src="{sauceImg}">
@@ -31,19 +49,18 @@
     <b>Total Calories:</b> {totalCalories}
     </div>
 </div>
-{/pizzas}
 
 </div>
 <script>
     $(document).ready(function(){
         $(".pizza-container").hide();
-        var pSelected = $('#select').val();
+        var pSelected = $('#selectBase').val();
         $("." + pSelected).show();
     });
 
     $('#select').change(function() {
         $(".pizza-container").hide();
-        $("." + this.value).show();
+        $(".").show();
 
     });
 </script>
