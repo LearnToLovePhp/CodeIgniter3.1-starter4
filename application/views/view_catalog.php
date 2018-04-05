@@ -35,7 +35,7 @@
         </td>
         {sauces}
         <td>
-            <img src="{img}" style="width:150px;height:150px" title=""/>
+            <img src="{img}" style="width:150px;height:150px" title="{name}"/>
             </br>
             <b>{name}</b>
             </br>
@@ -54,7 +54,7 @@
         </td>
         {cheeses}
         <td>
-            <img src="{img}" style="width:150px;height:150px" title=""/>
+            <img src="{img}" style="width:150px;height:150px" title="{name}"/>
             </br>
             <b>{name}</b>
             </br>
@@ -73,7 +73,7 @@
         </td>
         {meats}
         <td>
-            <img src="{img}" style="width:150px;height:150px" title=""/>
+            <img src="{img}" style="width:150px;height:150px" title="{name}"/>
             </br>
             <b>{name}</b>
             </br>
@@ -92,7 +92,7 @@
         </td>
         {veg}
         <td>
-            <img src="{img}" style="width:150px;height:150px" title=""/>
+            <img src="{img}" style="width:150px;height:150px" title="{name}"/>
             </br>
             <b>{name}</b>
             </br>
