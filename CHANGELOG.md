@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [0.0.8] - 2018-03-29
+### Added
+- user roles - added roles as constants
+             - added dropdown of user roles to nav bar
+             - Updated css for drop down menu
+             - saved user role in session
+
 ## [0.0.7] - 2018-02-12
 - set - incomplete implementation of Set controller
       - incomplete implementation of equipment_set view

@@ -1,5 +1,5 @@
 <div class="content center">
-<h1>Customize Your Pizza!</h1>
+<h1>Customize Your Pizza! - {role}</h1>
 
 <div>
     <!--The menu dropdown for equipment sets-->

@@ -79,6 +79,8 @@ class Catalog extends Application
         }
         
         //pass data to view_catalog as each of their respective names
+        $role = $this->session->userdata('userrole');
+        $this->data['role'] = $role;
         $this->data['bases'] = $bases;
         $this->data['sauces'] = $sauces;
         $this->data['cheeses'] = $cheeses;
