@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 
 
 ## [Unreleased]
+
+## [0.1.0] - 2018-04-06
+### Added
+- entity models for accessory and pizza
+
 ## [0.0.9] - 2018-04-06
 ### Added
 - customize page - page only accessable as user, admin
