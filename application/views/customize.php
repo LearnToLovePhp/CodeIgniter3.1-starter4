@@ -34,33 +34,78 @@
 <!--The div for the image-->
 <div class="pizza-container">
     <div class="pizza-photos">
-        <img class="pizzaLayer" src="{baseImg}">
-        <img class="pizzaLayer" src="{sauceImg}">
-        <img class="pizzaLayer" src="{cheeseImg}">
-        <img class="pizzaLayer" src="{meatImg}">
-        <img class="pizzaLayer" src="{vegImg}">
-    </div>
-    <div>
-    </br>
-    <b>{name}</b>
-    </br>
-    <b>Total Cost:</b> {totalCost}
-    </br>
-    <b>Total Calories:</b> {totalCalories}
+        {bases}
+            <img class="pizzaLayer base-container {name}" src="{img}">
+        {/bases}
+        {sauces}
+            <img class="pizzaLayer sauce-container {name}" src="{img}">
+        {/sauces}
+        {cheeses}
+            <img class="pizzaLayer cheese-container {name}" src="{img}">
+        {/cheeses}
+        {meats}
+            <img class="pizzaLayer meat-container {name}" src="{img}">
+        {/meats}
+        {veg}
+            <img class="pizzaLayer veg-container {name}" src="{img}">
+        {/veg}
     </div>
 </div>
-
 </div>
 <script>
     $(document).ready(function(){
-        $(".pizza-container").hide();
+        $(".base-container").hide();
         var pSelected = $('#selectBase').val();
         $("." + pSelected).show();
     });
 
-    $('#select').change(function() {
-        $(".pizza-container").hide();
-        $(".").show();
+    $('#selectBase').change(function() {
+        $(".base-container").hide();
+        $("." + this.value).show();
+
+    });
+    $(document).ready(function(){
+        $(".sauce-container").hide();
+        var pSelected = $('#selectSauce').val();
+        $("." + pSelected).show();
+    });
+
+    $('#selectSauce').change(function() {
+        $(".sauce-container").hide();
+        $("." + this.value).show();
+
+    });
+    $(document).ready(function(){
+        $(".cheese-container").hide();
+        var pSelected = $('#selectCheese').val();
+        $("." + pSelected).show();
+    });
+
+    $('#selectCheese').change(function() {
+        $(".cheese-container").hide();
+        $("." + this.value).show();
+
+    });
+    $(document).ready(function(){
+        $(".meat-container").hide();
+        var pSelected = $('#selectMeat').val();
+        $("." + pSelected).show();
+    });
+
+    $('#selectMeat').change(function() {
+        $(".meat-container").hide();
+        $("." + this.value).show();
+
+    });
+    $(document).ready(function(){
+        $(".veg-container").hide();
+        var pSelected = $('#selectVeg').val();
+        $("." + pSelected).show();
+    });
+
+    $('#selectVeg').change(function() {
+        $(".veg-container").hide();
+        $("." + this.value).show();
 
     });
 </script>
