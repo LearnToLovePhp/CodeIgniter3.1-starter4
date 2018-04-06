@@ -1,20 +1,23 @@
 <?php
+
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Catalog extends Application
+class Customize extends Application
 {
 
-    function __construct()
-    {
-        parent::__construct();
-    }
-
-    public function index()
-    {
+    /*
+        The index for the sets page
+        Sets is the home page
+        It displays complete pizza sets
+    */
+	public function index()
+	{
+        $this->load->model('Pizzas');
         $this->load->model('Ingredients');
-
+        
+        $pizzaList = $this->Pizzas->all();
         $ingredientList = $this->Ingredients->all();
-
+        $pizzas = array();
         $bases = array();
         $sauces = array();
         $cheeses = array();
@@ -77,18 +80,73 @@ class Catalog extends Application
                     break;
             }
         }
+        foreach($pizzaList as $pizza) {
+            array_push($pizzas, array(
+                "name" => $pizza->name,
+                "pizzaID" =>$pizza->pizzaID,
+                "base" => 'dough',
+                "baseImg" => 'img/dough.png',
+                "sauce" => $ingredientList[$pizza->sauce]->name,
+                "sauceImg" => $ingredientList[$pizza->sauce]->image,
+                "cheese" => $ingredientList[$pizza->cheese]->name,
+                "cheeseImg" => $ingredientList[$pizza->cheese]->image,
+                "meat" => $ingredientList[$pizza->meat]->name,
+                "meatImg" =>$ingredientList[$pizza->meat]->image,
+                "veg" => $ingredientList[$pizza->veg]->name,
+                "vegImg" => $ingredientList[$pizza->veg]->image,
+                "totalCost" => $this->getTotalCost($pizza, $ingredientList),
+                "totalCalories" => $this->getTotalCalories($pizza, $ingredientList)
+            ));
+
+
+        }
         
-        //pass data to view_catalog as each of their respective names
+        
         $role = $this->session->userdata('userrole');
         $this->data['role'] = $role;
-        $this->data['bases'] = $bases;
-        $this->data['sauces'] = $sauces;
-        $this->data['cheeses'] = $cheeses;
-        $this->data['meats'] = $meats;
-        $this->data['veg'] = $veg;
+        $this->data['pagebody'] = 'customize';
+        $this->data['bases']    = $bases;
+        $this->data['baseImg']  = 'img/dough.png';
+        $this->data['sauces']   = $sauces;
+        $this->data['cheeses']  = $cheeses;
+        $this->data['meats']    = $meats;
+        $this->data['veg']      = $veg;
 
-        $this->data['pagebody'] = 'view_catalog';
-        $this->render();
+		$this->render(); 
+    }
+    
+    public function getTotalCost($pizza, $ingredientList)
+    {
+        $totalCost = 0;
+        //base
+        $totalCost += 5;
+        //sauce
+        $totalCost += $ingredientList[$pizza->sauce]->price;
+        //cheese
+        $totalCost += $ingredientList[$pizza->cheese]->price;
+        //meat
+        $totalCost += $ingredientList[$pizza->meat]->price;
+        //veg
+        $totalCost += $ingredientList[$pizza->veg]->price;
+
+        return $totalCost;
+    }
+
+    public function getTotalCalories($pizza, $ingredientList)
+    {
+            $totalCalories = 0;
+            //base
+            $totalCalories += 5;
+            //sauce
+            $totalCalories += $ingredientList[$pizza->sauce]->calories;
+            //cheese
+            $totalCalories += $ingredientList[$pizza->cheese]->calories;
+            //meat
+            $totalCalories += $ingredientList[$pizza->meat]->calories;
+            //veg
+            $totalCalories += $ingredientList[$pizza->veg]->calories;
+        
+        return $totalCalories;
     }
 
 }
