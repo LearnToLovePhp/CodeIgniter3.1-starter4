@@ -8,6 +8,7 @@
         <option value="{pizzaID}" name="pizza">{name}</option>
     {/pizzas}
     </select>
+    {edit}
     {customize}
     
 </div>
