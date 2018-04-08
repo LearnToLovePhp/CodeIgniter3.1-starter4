@@ -1,6 +1,5 @@
 <div class="content center">
-    <h1>Pizza Topping List - {role}</h1>
-	<h1>{maintenance}</h1>
+    <h1>Pizza Topping Maintenance - {role}</h1>
 <table class="center">
     <tr>
         <th class="title">

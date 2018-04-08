@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Catalog extends Application
+class Maintenance extends Application
 {
 
     function __construct()
@@ -87,16 +87,15 @@ class Catalog extends Application
         $this->data['meats'] = $meats;
         $this->data['veg'] = $veg;
 		
-		//This checks if you are allowed to maintain the pizzas,
-		//and displays a button if you are worthy
+		//This will send you back to the regular catalog page if you suddenly become not admin
 		$role = $this->session->userdata('userrole');
         $this->data['role'] = $role;
-        if ($role == ROLE_ADMIN) 
-            $this->data['maintenance'] = '<a href="/maintenance"><input type="button" value="MAINTAIN THE PIZZAS"/></a>';
-        else
-            $this->data['maintenance'] = '';
+        if ($role != ROLE_ADMIN) {
+            $this->load->helper('url');
+			redirect('/catalog', 'refresh');
+		}
 
-        $this->data['pagebody'] = 'view_catalog';
+        $this->data['pagebody'] = 'maintenance';
         $this->render();
     }
 

@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [0.1.1] - 2018-04-08
+### Added
+- maintenance - incomplete implementation of view and controller
+              - Redirects the user back to regular catalog if not admin
+### Changed
+- catalog - Now displays a maintenance button if you are admin
+
 ## [0.1.0] - 2018-04-06
 ### Added
 - entity models for accessory and pizza
