@@ -5,6 +5,11 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [0.1.1] - 2018-04-08
+### Changed
+- customize page - save data
+                 - adds new row (edit will be seperate)
+
 ## [0.1.0] - 2018-04-06
 ### Added
 - entity models for accessory and pizza
