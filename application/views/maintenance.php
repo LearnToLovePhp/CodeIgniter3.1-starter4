@@ -12,7 +12,7 @@
     </tr>
     <tr id="base">
         <td class="title">
-            Bases 
+		{baseName}
 			<form action="/action_page.php"> 
 				Category: <input type="text" name="FirstName" value="Your new category here"></br>
 				<input type="submit" value="Submit">
@@ -61,7 +61,7 @@
             Calories: {calories}
         </td>
 		<td>
-		<form method="post" action="/maintenance/change"> 
+		<form method="post" action="/maintenance/changeItem"> 
 			<input type="hidden" name="ingrID" value="{ingrID}">
 			<input type="hidden" name="catID" value="{catID}">
 			Name: <input type="text" name="type" value="Your new name here"></br>

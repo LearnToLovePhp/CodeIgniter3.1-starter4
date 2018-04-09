@@ -12,15 +12,20 @@ class Maintenance extends Application
     public function index()
     {
         $this->load->model('Ingredients');
-
+		$this->load->model('Categories');
+		
         $ingredientList = $this->Ingredients->all();
 
+		$categories = $this->Categories->all();
         $bases = array();
         $sauces = array();
         $cheeses = array();
         $meats = array();
         $veg = array();
 
+		$baseName = $categories["01"]->catName;
+		
+		
         //Populates each array with the respective ingredients
         foreach ($ingredientList as $ingredient) {
             switch ($ingredient->catID)
@@ -96,6 +101,7 @@ class Maintenance extends Application
         $this->data['cheeses'] = $cheeses;
         $this->data['meats'] = $meats;
         $this->data['veg'] = $veg;
+		$this->data['baseName'] = $baseName;
 		
 		//This will send you back to the regular catalog page if you suddenly become not admin
 		$role = $this->session->userdata('userrole');
@@ -120,7 +126,6 @@ class Maintenance extends Application
 			return;
 		}
 		
-		$this->load->model('dough');
 		$this->load->model('ingredients');
 		$this->load->library('form_validation');
 		$this->form_validation->set_rules($this->ingredients->rules());
