@@ -6,6 +6,10 @@ All notable changes to this project will be documented in this file.
 ## [Unreleased]
 
 
+## [0.1.6] - 2018-04-08
+### Changed
+- sets - fixed so that it displays the base using attributes from csv
+
 ## [0.1.5] - 2018-04-08
 ### Added
 - maintenance - Incomplete implementation of view and controller
