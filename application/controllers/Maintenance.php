@@ -28,6 +28,8 @@ class Maintenance extends Application
                 //catID = dough
                 case 1:
                     array_push($bases, array(
+						"ingrID" => $ingredient->ingrID,
+						"catID" => $ingredient->catID,
                         "name" => $ingredient->name,
                         "type" => 'dough',
                         "price" => $ingredient->price,
@@ -38,6 +40,8 @@ class Maintenance extends Application
                 //catID = sauce
                 case 2:
                     array_push($sauces, array(
+						"ingrID" => $ingredient->ingrID,
+						"catID" => $ingredient->catID,
                         "name" => $ingredient->name,
                         "type" => 'sauce',
                         "price" => $ingredient->price,
@@ -48,6 +52,8 @@ class Maintenance extends Application
                 //catID = cheese
                 case 3:
                     array_push($cheeses, array(
+						"ingrID" => $ingredient->ingrID,
+						"catID" => $ingredient->catID,
                         "name" => $ingredient->name,
                         "type" => 'cheese',
                         "price" => $ingredient->price,
@@ -58,6 +64,8 @@ class Maintenance extends Application
                 //catID = meat
                 case 4:
                     array_push($meats, array(
+						"ingrID" => $ingredient->ingrID,
+						"catID" => $ingredient->catID,
                         "name" => $ingredient->name,
                         "type" => 'meat',
                         "price" => $ingredient->price,
@@ -68,6 +76,8 @@ class Maintenance extends Application
                 //catID = veg
                 case 5:
                     array_push($veg, array(
+						"ingrID" => $ingredient->ingrID,
+						"catID" => $ingredient->catID,
                         "name" => $ingredient->name,
                         "type" => 'veg',
                         "price" => $ingredient->price,
@@ -99,4 +109,30 @@ class Maintenance extends Application
         $this->render();
     }
 
+	//This changes the attribute of the items
+	public function changeItem()
+	{
+		$role = $this->session->userdata('userrole');
+		
+		if ($role != ROLE_ADMIN)
+		{
+			redirect($_SERVER['HTTP_REFERER']); // back where we came from
+			return;
+		}
+		
+		$this->load->model('dough');
+		$this->load->model('ingredients');
+		$this->load->library('form_validation');
+		$this->form_validation->set_rules($this->ingredients->rules());
+		
+		$item = $this->input->post();
+		$item = (object) $item;  // convert back to object
+		
+		// validate away
+		if ($this->form_validation->run())
+		{
+			$this->ingredients->update($item);
+		} 
+		redirect('/maintenance');
+	}
 }

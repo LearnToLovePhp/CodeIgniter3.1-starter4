@@ -12,7 +12,11 @@
     </tr>
     <tr id="base">
         <td class="title">
-            Bases
+            Bases 
+			<form action="/action_page.php"> 
+				Category: <input type="text" name="FirstName" value="Your new category here"></br>
+				<input type="submit" value="Submit">
+			</form>
         </td>
         {bases}
         <td>
@@ -26,6 +30,17 @@
             </br>
             Calories: {calories}
         </td>
+		<td>
+		<form method="post" action="/maintenance/changeItem"> 
+			<input type="hidden" name="ingrID" value="{ingrID}">
+			<input type="hidden" name="catID" value="{catID}">
+			Name: <input type="text" name="type" value="Your new name here"></br>
+			Price: <input type="number" name="price" value="Your new price here"></br>
+			kCals: <input type="number" name="calories" value="Your new calories here"></br>
+			<input type="hidden" name="image" value="{img}">
+			<input type="submit" value="Submit">
+		</form>
+		</td>
         {/bases}
     </tr>
 
@@ -45,6 +60,17 @@
             </br>
             Calories: {calories}
         </td>
+		<td>
+		<form method="post" action="/maintenance/change"> 
+			<input type="hidden" name="ingrID" value="{ingrID}">
+			<input type="hidden" name="catID" value="{catID}">
+			Name: <input type="text" name="type" value="Your new name here"></br>
+			Price: <input type="number" name="price" value="Your new price here"></br>
+			kCals: <input type="number" name="calories" value="Your new calories here"></br>
+			<input type="hidden" name="image" value="{img}">
+			<input type="submit" value="Submit">
+		</form>
+		</td>
         {/sauces}
     </tr>
 
@@ -64,6 +90,17 @@
             </br>
             Calories: {calories}
         </td>
+		<td>
+		<form method="post" action="/maintenance/changeItem"> 
+			<input type="hidden" name="ingrID" value="{ingrID}">
+			<input type="hidden" name="catID" value="{catID}">
+			Name: <input type="text" name="type" value="Your new name here"></br>
+			Price: <input type="number" name="price" value="Your new price here"></br>
+			kCals: <input type="number" name="calories" value="Your new calories here"></br>
+			<input type="hidden" name="image" value="{img}">
+			<input type="submit" value="Submit">
+		</form>
+		</td>
         {/cheeses}
     </tr>
 
@@ -83,6 +120,17 @@
             </br>
             Calories: {calories}
         </td>
+		<td>
+		<form method="post" action="/maintenance/changeItem"> 
+			<input type="hidden" name="ingrID" value="{ingrID}">
+			<input type="hidden" name="catID" value="{catID}">
+			Name: <input type="text" name="type" value="Your new name here"></br>
+			Price: <input type="number" name="price" value="Your new price here"></br>
+			kCals: <input type="number" name="calories" value="Your new calories here"></br>
+			<input type="hidden" name="image" value="{img}">
+			<input type="submit" value="Submit">
+		</form>
+		</td>
         {/meats}
     </tr>
 
@@ -102,6 +150,17 @@
             </br>
             Calories: {calories}
         </td>
+		<td>
+		<form method="post" action="/maintenance/changeItem"> 
+			<input type="hidden" name="ingrID" value="{ingrID}">
+			<input type="hidden" name="catID" value="{catID}">
+			Name: <input type="text" name="type" value="Your new name here"></br>
+			Price: <input type="number" name="price" value="Your new price here"></br>
+			kCals: <input type="number" name="calories" value="Your new calories here"></br>
+			<input type="hidden" name="image" value="{img}">
+			<input type="submit" value="Submit">
+		</form>
+		</td>
         {/veg}
     </tr>
     </table>
