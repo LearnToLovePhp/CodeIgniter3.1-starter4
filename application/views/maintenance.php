@@ -12,11 +12,7 @@
     </tr>
     <tr id="base">
         <td class="title">
-		bases
-			<form action="/action_page.php"> 
-				Category: <input type="text" name="FirstName" value="Your new category here"></br>
-				<input type="submit" value="Submit">
-			</form>
+			bases
         </td>
         {bases}
         <td>
