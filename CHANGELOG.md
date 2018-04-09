@@ -5,6 +5,11 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+
+## [0.1.4] - 2018-04-08
+### Added
+- Unit tests - unit tests for the pizza and accessory models
+
 ## [0.1.3] - 2018-04-08
 ### Changed
 - fixed default role when user first visits page, now always shows guest unless selected otherwise
