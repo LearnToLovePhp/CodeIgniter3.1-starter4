@@ -12,7 +12,7 @@ class Maintenance extends Application
     public function index()
     {
         $this->load->model('Ingredients');
-
+		
         $ingredientList = $this->Ingredients->all();
 
         $bases = array();
@@ -120,7 +120,6 @@ class Maintenance extends Application
 			return;
 		}
 		
-		$this->load->model('dough');
 		$this->load->model('ingredients');
 		$this->load->library('form_validation');
 		$this->form_validation->set_rules($this->ingredients->rules());
