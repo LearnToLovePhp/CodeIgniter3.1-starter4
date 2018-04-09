@@ -12,7 +12,7 @@
     </tr>
     <tr id="base">
         <td class="title">
-		{baseName}
+		bases
 			<form action="/action_page.php"> 
 				Category: <input type="text" name="FirstName" value="Your new category here"></br>
 				<input type="submit" value="Submit">
