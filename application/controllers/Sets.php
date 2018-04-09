@@ -41,10 +41,16 @@ class Sets extends Application
         }
         $role = $this->session->userdata('userrole');
         $this->data['role'] = $role;
-        if ($role == ROLE_USER || $role == ROLE_ADMIN) 
+        if ($role == ROLE_USER || $role == ROLE_ADMIN)
+        {
             $this->data['customize'] = '<a href="/customize"><input type="button" value="Customize your own pizza"/></a>';
+            $this->data['edit'] = '<a href="/edit"><input type="button" value="Edit"/></a>';
+        }
         else
+        {
             $this->data['customize'] = '';
+            $this->data[edit] = '';
+        }
         $this->data['pagebody'] = 'equipment_sets';
         $this->data['pizzas'] = $pizzas;
 
