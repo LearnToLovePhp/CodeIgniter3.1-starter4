@@ -26,7 +26,7 @@ class Accessory extends Entity {
             throw new InvalidArgumentException("An Id must have a value");
         }
 
-        $this->ingrID = $value;
+        $this->catID = $value;
         return $this;
     }
 
