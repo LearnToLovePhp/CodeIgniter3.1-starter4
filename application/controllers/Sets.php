@@ -23,8 +23,8 @@ class Sets extends Application
             array_push($pizzas, array(
                 "name" => $pizza->name,
                 "pizzaID" =>$pizza->pizzaID,
-                "base" => 'dough',
-                "baseImg" => 'img/dough.png',
+                "base" => $ingredientList[$pizza->base]->name,
+                "baseImg" => $ingredientList[$pizza->base]->image,
                 "sauce" => $ingredientList[$pizza->sauce]->name,
                 "sauceImg" => $ingredientList[$pizza->sauce]->image,
                 "cheese" => $ingredientList[$pizza->cheese]->name,
@@ -62,7 +62,7 @@ class Sets extends Application
     {
         $totalCost = 0;
         //base
-        $totalCost += 5;
+        $totalCost += $ingredientList[$pizza->base]->price;
         //sauce
         $totalCost += $ingredientList[$pizza->sauce]->price;
         //cheese
@@ -79,7 +79,7 @@ class Sets extends Application
     {
             $totalCalories = 0;
             //base
-            $totalCalories += 5;
+            $totalCalories += $ingredientList[$pizza->base]->calories;
             //sauce
             $totalCalories += $ingredientList[$pizza->sauce]->calories;
             //cheese
