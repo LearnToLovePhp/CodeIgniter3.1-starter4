@@ -6,6 +6,15 @@ All notable changes to this project will be documented in this file.
 ## [Unreleased]
 
 
+## [0.1.5] - 2018-04-08
+### Added
+- maintenance - Incomplete implementation of view and controller
+              - Redirects the user back to regular catalog if not admin
+			  - Can change ingredients attributes
+### Changed
+- catalog - Now displays a maintenance button if you are admin
+
+
 ## [0.1.4] - 2018-04-08
 ### Added
 - Unit tests - unit tests for the pizza and accessory models
@@ -24,6 +33,7 @@ All notable changes to this project will be documented in this file.
 ### Changed
 - customize page - save data
                  - adds new row (edit will be seperate)
+
 
 ## [0.1.0] - 2018-04-06
 ### Added
