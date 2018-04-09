@@ -96,7 +96,6 @@ class Maintenance extends Application
         $this->data['cheeses'] = $cheeses;
         $this->data['meats'] = $meats;
         $this->data['veg'] = $veg;
-		$this->data['baseName'] = $baseName;
 		
 		//This will send you back to the regular catalog page if you suddenly become not admin
 		$role = $this->session->userdata('userrole');
