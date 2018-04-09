@@ -5,6 +5,10 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [0.1.1] - 2018-04-08
+### Added
+- Unit tests - unit tests for the pizza and accessory models
+
 ## [0.1.0] - 2018-04-06
 ### Added
 - entity models for accessory and pizza
