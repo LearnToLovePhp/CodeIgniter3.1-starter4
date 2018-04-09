@@ -7,8 +7,9 @@ All notable changes to this project will be documented in this file.
 
 ## [0.1.1] - 2018-04-08
 ### Added
-- maintenance - incomplete implementation of view and controller
+- maintenance - Incomplete implementation of view and controller
               - Redirects the user back to regular catalog if not admin
+			  - Can change ingredients attributes
 ### Changed
 - catalog - Now displays a maintenance button if you are admin
 
