@@ -5,9 +5,25 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
-## [0.1.1] - 2018-04-08
+
+## [0.1.4] - 2018-04-08
 ### Added
 - Unit tests - unit tests for the pizza and accessory models
+
+## [0.1.3] - 2018-04-08
+### Changed
+- fixed default role when user first visits page, now always shows guest unless selected otherwise
+- updated, on-topic readme
+
+## [0.1.2] - 2018-04-08
+### Added
+- edit page - edits existing set
+            - modifies row
+                 
+## [0.1.1] - 2018-04-08
+### Changed
+- customize page - save data
+                 - adds new row (edit will be seperate)
 
 ## [0.1.0] - 2018-04-06
 ### Added
