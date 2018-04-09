@@ -49,7 +49,7 @@ class Sets extends Application
         else
         {
             $this->data['customize'] = '';
-            $this->data[edit] = '';
+            $this->data['edit'] = '';
         }
         $this->data['pagebody'] = 'equipment_sets';
         $this->data['pizzas'] = $pizzas;
