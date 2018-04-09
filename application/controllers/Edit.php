@@ -44,25 +44,36 @@ class Edit extends Application
     {
         $this->load->model('Pizzas');
         $pizzaList = $this->Pizzas->all();
-        $id = 1;
+        $id = "1";
         
         // retrieve & update data transfer buffer
         $pizza = (array) $this->session->userdata('pizza');
-        $pizza = array_merge($pizza, $this->input->post());
-        $pizza = (object) $pizza;  // convert back to object
-        $this->session->set_userdata('pizza', (object) $pizza);
-        $pizza->base = 1;
+        unset($pizza['submit']);
+        $postPizza = $this->input->post();
+        unset($postPizza['submit']);
+        $pizza = array_merge($pizza, $postPizza);
+
         // validate away
         foreach($pizzaList as $pizzaData) {
-            if (strcmp($pizzaData->name,$pizza->name))
+            if (strcmp($pizzaData->name,$pizza['name']))
             {
                 $id = $pizzaData->pizzaID;
-                $pizza->name = $pizzaData->name;
+                $pizza['name'] = $pizzaData->name;
             }
         }
 
-        $pizza->pizzaID = $id;
-        $this->Pizzas->add($pizza);
+        $order = array("pizzaID","name","base","sauce","cheese","meat","veg");
+        $out = array();
+        foreach($order as $k) {
+            $out[$k] = $pizza[$k];
+        }
+
+        $pizza['base'] = "1";
+        $pizza = (object) $pizza;  // convert back to object
+        $this->session->set_userdata('pizza', (object) $pizza);
+
+
+        $this->Pizzas->update($out);
         redirect('/sets');
     }
 

@@ -5,6 +5,9 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [0.1.7] - 2018-04-08
+### Changed
+- Fixed CSV output from edit page - no longer creating corrupt data
 
 ## [0.1.6] - 2018-04-08
 ### Changed
