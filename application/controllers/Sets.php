@@ -48,7 +48,7 @@ class Sets extends Application
         }
         else
         {
-            //$this->data['role'] = ROLE_GUEST;
+            $this->data['role'] = ROLE_GUEST;
             $this->data['customize'] = '';
             $this->data['edit'] = '';
         }
