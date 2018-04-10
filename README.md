@@ -1,36 +1,15 @@
-## CodeIgniter3.1-starter4
+# Pizza Picker 
+### A Topping Tester
 
-This project can be used as a starter for a webapp built with CodeIgniter 3.1.
+A web app that lets you check out some super exciting pizza possibilities! 
 
-This starter builds on [CodeIgniter3.1-starter3](https://github.com/jedi-academy/CodeIgniter3.1-starter3),
-adding an entity model and enhancing the collection models to use it.
+#### Fun Features:
+- view delicious predefined pizzas
+- browse our *extensive* catalog of organic, locally sourced ingredients 
+- edit an existing pizza to your liking
+- add a new pizza altogether!
 
-This starter adds a rich persistent data abstraction, initially in the form
-of the CSV_Model.
+Unfortunately, we do not currently support any delivery or pickup options. 
+It is both inadvisable and impossible to eat any pizza shown or created on the Pizza Picker.
 
-An example, using menu items at a fast food place...
-
-`data/menuitems.csv`:
-
-    id,name,category,price
-    BM,Big Mac,entree,5.25
-    MF,Medium fried,side,2.00
-    LF,Large fries,side,3.00
-
-`application/models/themenu.php`:
-
-    class Themenu extends CSV_Model {
-      function __construct() {
-        parent::__construct('../data/menuitems.csv','id');
-      }
-    }
-
-Usage inside some controller, taking advantage of the DataMapper interface
-implemented by the CSV_Model...
-
-    $this->load->model('themenu;);
-    $all_the_items = $this->themenu->all();
-    ...
-    // get all of the entrees
-    $subset = $this->themenu->where('category','entree');
-    ...
+Please pizza responsibly. 
